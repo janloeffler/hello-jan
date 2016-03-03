@@ -8,13 +8,13 @@
         <version>1.1.9.RELEASE</version>
     </parent>
 
-    <groupId>de.zalando.platform</groupId>
+    <groupId>jlsoft</groupId>
     <artifactId>hello-jan</artifactId>
     <version>1.5-SNAPSHOT</version>
 	<name>Hello World REST API</name>
 	<description>TThis is just a Hello World REST API for tests.</description>
 	<organization>
-		<name>Zalando/Technology/Platform</name>
+		<name>JLSoft</name>
 	</organization>
 	
 	<properties>

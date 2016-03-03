@@ -12,41 +12,13 @@ This project shows everything necessary, to deploy a fully working Java Spring w
 
 * JDK 8
 * Maven 3
-* Docker (see Boot2Docker for Mac users)
-* STUPS Senza (https://github.com/zalando-stups/senza)
+* Docker
 * AWS account 
-
-# Make sure stups / senza is up-to-date
-
-    $ sudo apt-get install python3 python3-pip
-    $ sudo easy_install-3.4 pip
-
-    $ sudo pip3 install --upgrade stups
-    $ sudo pip3 install --upgrade stups-senza
-    $ sudo pip3 install --upgrade stups-piu
-    $ sudo pip3 install --upgrade stups-mai
-    $ sudo pip3 install --upgrade zign
-    $ sudo pip3 install --upgrade httpie-zign
-
-    $ export LC_ALL=en_US.utf-8
-    $ export LANG=en_US.utf-8
-    
-# Prepare docker when using boot2docker on MacOS
-
-    $ $(boot2docker shellinit)    
-    
-# Login to AWS
-    
-    $ mai login %YOUR_AWS_PROFILE_NAME%
-
-# Login to Pier One Docker registry
-
-    $ pierone login
 
 # Build the project
 
     $ mvn clean package
-    $ docker build -t %YOUR_DOCKER_REGISTRY%/hello-jan:0.0.1-SNAPSHOT .
+    $ docker build -t hello-jan:0.0.1-SNAPSHOT .
     
 # Run locally
 

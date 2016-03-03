@@ -1,10 +1,9 @@
 FROM zalando/openjdk:8u66-b17-1-2
 
-MAINTAINER Jan Löffler <jan.loeffler@zalando.de>
+MAINTAINER Jan Löffler <mail@jlsoft.de>
 
 RUN mkdir -p /newrelic
 
-ADD scm-source.json /scm-source.json
 ADD newrelic/newrelic.jar /newrelic/newrelic.jar
 ADD newrelic/newrelic.yml /newrelic/newrelic.yml
 ADD target/hello-jan.jar /hello-jan.jar
