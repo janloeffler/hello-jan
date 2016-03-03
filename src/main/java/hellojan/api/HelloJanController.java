@@ -1,4 +1,4 @@
-package de.zalando.platform.hellojan.api;
+package hellojan.api;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +39,10 @@ final class HelloJanController {
 		return "Test me with /test/ or say /hello/message/";
 	}
 
-	@RequestMapping("/test/")
+	@RequestMapping("/test")
 	@ResponseBody
 	List<String[]> test() {
-		LOG.info("called /test/");
+		LOG.info("called /test");
 
 		List<String[]> list = new ArrayList<String[]>();
 		list.add(new String[] { "Cool", "Bla, Blubb" });
@@ -50,5 +50,18 @@ final class HelloJanController {
 		list.add(new String[] { "Grrr", "What's", "up?" });
 
 		return list;
+	}
+	
+	@RequestMapping("/help")
+	@ResponseBody
+	String help() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Hello-Jan REST Service" + System.lineSeparator());
+		sb.append("/help --> returns this text" + System.lineSeparator());
+		sb.append("/health --> returns OK" + System.lineSeparator());
+		sb.append("/test --> returns sample JSON text" + System.lineSeparator());
+		sb.append("/hello/%MESSAGE% --> returns hello %MESSAGE%" + System.lineSeparator());
+		
+		return sb.toString();
 	}
 }

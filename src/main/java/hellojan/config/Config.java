@@ -1,7 +1,7 @@
 /**
  *
  */
-package de.zalando.platform.hellojan.config;
+package hellojan.config;
 
 
 /**

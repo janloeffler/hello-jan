@@ -1,4 +1,4 @@
-package de.zalando.platform.hellojan;
+package hellojan;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
